@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal" >
+
+    <!-- Make all the Buttons be on one line and the TextViews be below them -->
+ <RelativeLayout
+        android:id="@+id/ButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" >
+
+        <Button
+            android:id="@+id/signButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/center"
+            android:onClick="switchSign"
+            android:text="@string/plus" />
+
+        <Button
+            android:id="@+id/diceButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/signButton"
+            android:onClick="changeDiceType"
+            android:text="@string/d4" />
+
+        <Button
+            android:id="@+id/constantButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/center"
+            android:onClick="incrementConstant"
+            android:text="@string/zero" />
+
+        <Button
+            android:id="@+id/numButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/diceButton"
+            android:onClick="incrementNumDice"
+            android:text="@string/one" />
+
+        <Button
+            android:id="@+id/equalsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/constantButton"
+            android:onClick="calculate"
+            android:text="@string/equals" />
+
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/blank" />
+
+        <TextView
+            android:id="@+id/answer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/equalsButton"
+            android:gravity="center"
+            android:text="@string/blank" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/rolls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ButtonsLayout"
+        android:layout_centerHorizontal="true"
+        android:gravity="center|top"
+        android:text="@string/blank" />
+    
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="reset"
+        android:text="@string/reset" />
+
+    <LinearLayout
+        android:id="@id/ButtonsLayout"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center" >
+        
+        <Button
+            android:id="@id/d4button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeDiceTypeUsingOtherButtons"
+            android:text="@string/d4" />
+        
+        <Button
+            android:id="@id/d6button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeDiceTypeUsingOtherButtons"
+            android:text="@string/d6" />
+        
+        <Button
+            android:id="@id/d8button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeDiceTypeUsingOtherButtons"
+            android:text="@string/d8" />
+        
+        <Button
+            android:id="@id/d10button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeDiceTypeUsingOtherButtons"
+            android:text="@string/d10" />
+        
+        <Button
+            android:id="@id/d12button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeDiceTypeUsingOtherButtons"
+            android:text="@string/d12" />
+        
+        <Button
+            android:id="@id/d20button"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeDiceTypeUsingOtherButtons"
+            android:text="@string/d20" />
+    </LinearLayout>
+
+</RelativeLayout>
