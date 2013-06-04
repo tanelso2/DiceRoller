@@ -1,3 +1,7 @@
+/**
+ * @author tanelso2
+ */
+
 package dnd.diceroller;
 
 import android.app.Activity;
